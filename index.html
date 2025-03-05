@@ -96,7 +96,7 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Main Paper</span>
+                  <span>CrowdSplat</span>
                 </a>
               </span>
               <span class="link-block">
@@ -105,7 +105,7 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Perception Study</span>
+                  <span>User Study</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -149,24 +149,17 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-        <img src="./static/images/Overview (2).png"
-                 class="teaser-image"
-                />
-        <!-- You can also add a video as a teaser -->
-        <!--
         <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="./static/images/teaser.jpg"
-                    type="video/mp4">
+            <source src="./static/videos/VideoCandi_01.mp4" type="video/mp4">
         </video> 
-        -->
       <h2 class="subtitle has-text-centered">
-        An example teaser image.
+        <!-- An example teaser video. -->
       </h2>
     </div>
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     
     <div class="hero-body">
@@ -184,16 +177,16 @@
         <source src="./static/videos/rendered_video_mo2.mp4"
                 type="video/mp4">
       </video>
-        <!-- Video task
+        Video task
         Check folder ./static/videos, change video_B to something meaningful there.
         -->
-      <h2 class="subtitle has-text-centered">
+      <!-- <h2 class="subtitle has-text-centered">
         An example video.
       </h2>
     </div>
     
   </div>
-</section>
+</section> --> 
 
 
 
@@ -206,7 +199,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present CrowdSplat, a novel approach that leverages 3D Gaussian Splatting for real-time, high-quality crowd rendering. Our method utilizes 3D Gaussian functions to represent animated human characters in diverse poses and outfits, which are extracted from monocular videos. We integrate Level of Detail (LoD) rendering to optimize computational efficiency and quality. The CrowdSplat framework consists of two stages: (1) avatar reconstruction and (2) crowd synthesis. The framework is also optimized for GPU memory usage to enhance scalability. Quantitative and qualitative evaluations show that CrowdSplat achieves good levels of rendering quality, memory efficiency, and computational performance. Through these experiments, we demonstrate that CrowdSplat is a viable solution for dynamic, realistic crowd simulation in real-time applications.
+            We present CrowdSplat, a novel approach that leverages 3D Gaussian Splatting for real-time, high-quality crowd rendering. Our method utilizes 3D Gaussian functions to represent animated human characters in diverse poses and outfits, which are extracted from monocular videos. We integrate Level of Detail (LoD) rendering to optimize computational efficiency and quality. The CrowdSplat framework consists of two stages: (1) avatar reconstruction and (2) crowd synthesis. The framework is also optimized for GPU memory usage to enhance scalability. Quantitative and qualitative evaluations show that CrowdSplat achieves good levels of rendering quality, memory efficiency, and computational performance. Through these experiments, we demonstrate that CrowdSplat is a viable solution for dynamic, realistic crowd simulation in real-time applications. Additionally, in our follow-up study, we investigate 3D Gaussian Splatting for crowd rendering and look at the main factors that affect viewer perception.
           </p>
         </div>
       </div>
@@ -221,7 +214,7 @@
           <img src="./static/images/Overview (2).png" class="method-image" alt="Pipeline Overview"/>
           <div class="content has-text-justified">
             <p>
-              Our method consists of two primary stages: (1) avatar reconstruction and (2) crowd synthesis...
+              The first stage combines the estimated SMPL body poses and images with a UV positional map. This process fits the 3D Gaussian attributes for each sampled point on the SMPL mesh template, reconstructing a Gaussian avatar template. The second stage uses Linear Blend Skinning (LBS) to animate multiple crowd characters, using an LoD technique for memory and rendering speed optimization. We reconstruct 14 avatar templates in the first stage and randomly duplicate these templates to 3,500 characters in the second stage.
             </p>
           </div>
         </div>
@@ -235,22 +228,22 @@
         <div class="hero-body has-text-centered">
           <div class="columns is-centered">
             <div class="column is-half has-text-centered">
-              <img src="./static/images/FPS.png" class="result-image" style="width: 80%; height: auto; display: inline-block;" alt="Rendering Speed"/>
+              <img src="./static/images/FPS.png" class="result-image" style="width: 150%; height: auto; display: inline-block;" alt="Rendering Speed"/>
               <p class="is-size-6">Rendering speed (in FPS) for different numbers of Gaussians and characters.</p>
             </div>
             <div class="column is-half has-text-centered">
-              <img src="./static/images/GPU memory cost.png" class="result-image" style="width: 80%; height: auto; display: inline-block;" alt="GPU Memory Cost"/>
+              <img src="./static/images/GPU memory cost.png" class="result-image" style="width: 100%; height: auto; display: inline-block;" alt="GPU Memory Cost"/>
               <p class="is-size-6">GPU memory cost (in MiB) for different numbers of Gaussians and characters. † is the memory optimization by the CUDA program.</p>
             </div>
           </div>
           <div class="content has-text-justified">
-            <!-- <p>
+             <p>
               We evaluate the performance of CrowdSplat in terms of rendering quality, memory efficiency, and real-time performance...
-            </p> -->
-          </div>
+            </p>
+          <!-- </div>
         </div>
       </div>
-    </section>
+    </section> 
     
     <!-- User Study -->
     <section class="section">
@@ -258,17 +251,20 @@
         <h2 class="title is-3 has-text-centered">User Study</h2>
         <div class="hero-body has-text-centered">
           <video id="lod-video" autoplay muted loop playsinline width="70%">
-            <source src="./static/videos/lod_video.mp4" type="video/mp4">
+            <source src="./static/videos/Stimuli_clip.mp4" type="video/mp4">
           </video>
-          <div class="content has-text-justified">
+          <!-- <div class="content has-text-justified">
             <p>
               We conducted a user study to evaluate the perceived level of detail in crowd rendering...
             </p>
-          </div>
+          </div> -->
         </div>
+      </div>
+    </section>
+    
         
         <!-- Stimuli Subsection -->
-        <div class="hero-body has-text-centered">
+        <!-- <div class="hero-body has-text-centered">
           <h3 class="title is-4">Stimuli</h3>
           <video id="lod-video" autoplay muted loop playsinline width="70%">
             <source src="./static/videos/stimuli_video.mp4" type="video/mp4">
@@ -279,10 +275,10 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
 
         <!-- Results Subsection -->
-        <div class="hero-body has-text-centered">
+        <!-- <div class="hero-body has-text-centered">
           <h3 class="title is-4">Results</h3>
           <img src="./static/images/result_image.png" class="result-image" alt="User Study Results"/>
           <div class="content has-text-justified">
@@ -290,9 +286,9 @@
               The results of our user study indicate that our Gaussian splatting method provides an improved balance between quality and efficiency...
             </p>
           </div>
-        </div>
-      </div>
-    </section>
+        </div> -->
+      <!-- </div>
+    </section> -->
 
 
 
