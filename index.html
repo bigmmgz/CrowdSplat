@@ -218,7 +218,7 @@
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Method Overview</h2>
         <div class="hero-body has-text-centered">
-          <img src="./static/images/pipeline_image.png" class="method-image" alt="Pipeline Overview"/>
+          <img src="./static/images/Overview (2).png" class="method-image" alt="Pipeline Overview"/>
           <div class="content has-text-justified">
             <p>
               Our method consists of two primary stages: (1) avatar reconstruction and (2) crowd synthesis...
@@ -233,11 +233,20 @@
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
         <div class="hero-body has-text-centered">
-          <img src="./static/images/performance_image.png" class="result-image" alt="Performance Analysis"/>
+          <div class="columns is-centered">
+            <div class="column is-half has-text-centered">
+              <img src="./static/images/FPS.png" class="result-image" style="width: 80%; height: auto; display: inline-block;" alt="Rendering Speed"/>
+              <p class="is-size-6">Rendering speed (in FPS) for different numbers of Gaussians and characters.</p>
+            </div>
+            <div class="column is-half has-text-centered">
+              <img src="./static/images/GPU memory cost.png" class="result-image" style="width: 80%; height: auto; display: inline-block;" alt="GPU Memory Cost"/>
+              <p class="is-size-6">GPU memory cost (in MiB) for different numbers of Gaussians and characters. † is the memory optimization by the CUDA program.</p>
+            </div>
+          </div>
           <div class="content has-text-justified">
-            <p>
+            <!-- <p>
               We evaluate the performance of CrowdSplat in terms of rendering quality, memory efficiency, and real-time performance...
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
