@@ -52,27 +52,33 @@
       .is-size-5, .is-size-6 { font-size: 1.2rem !important; }
     }
 
-    /* Make videos and images full width */
-    .teaser video, .hero-body video, .hero-body img {
-      width: 100vw;
+    /* Adjust video width for near full-screen effect */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .video-container video {
+      width: 100vw; /* Full width */
+      max-width: 98vw; /* Almost full screen */
       height: auto;
       display: block;
-      max-width: none;
+      margin: 0 auto; /* Ensures centering */
     }
-
-    /* Centered Content */
-    .hero-body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Ensure columns stack correctly on mobile */
-    .columns.is-mobile { flex-wrap: wrap; }
   </style>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
 
   
   <section class="hero">
@@ -292,9 +298,13 @@
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">More Results</h2>
         <div class="hero-body has-text-centered">
+          <video id="crowd-video2" autoplay muted loop playsinline width="120%">
+            <source src="./static/videos/Render_100.mp4" type="video/mp4">
+          </video>
           <video id="crowd-video" autoplay muted loop playsinline width="120%">
             <source src="./static/videos/Crowd_LargeCropped.mp4" type="video/mp4">
           </video>
+          
           <!-- <div class="content has-text-justified">
             <p>
               We conducted a user study to evaluate the perceived level of detail in crowd rendering...
